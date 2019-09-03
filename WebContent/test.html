@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+	f=function(){
+		var v=document.getElementById("z");
+		z=v.value;
+		z=z-1;
+		if(z>0)
+			v.value=z;
+	}
+	j=function(){
+		var v=document.getElementById("z");
+		z=v.value;
+		z=parseInt(z)+1;
+		v.value=z;
+	}
+	
+	check=function(){  
+    $('#form1').ajaxSubmit(  
+         {  
+             url: 'UpGwc',
+             type: 'post',
+             dataType: 'json',
+             beforeSubmit: function () {}, 
+             success: function (data) {  
+                 if (data.Res == "True" || data.Res == true) {  
+                	 alert("data.Msg");  
+                 } else {  
+                     alert("error!data.Msg");  
+                 }  
+             },  
+             clearForm: false,//禁止清楚表单  
+             resetForm: false //禁止重置表单  
+         });
+	}
+</script>
+<style>
+	a.gwc {
+		width: 100px;
+    	height:30px;
+    	line-height: 28px;
+    	background: #ff2832;
+    	border-radius: 3px;
+    	display: inline-block;
+    	color: #fff;
+    	text-align: center;
+    	font-size: 14px;
+    	margin-right: 10px;
+		text-decoration:none;
+	}
+	.list{
+		list-style-type:none;
+		display:block;
+		width:600px;
+		height:300px;
+	}
+	.list img{
+		float:left;
+	}
+	.list li{
+		width:600px;
+		height:200px;
+		
+	}
+	.jj{
+		height:80px;
+	}
+
+	a:link {color:#FFF; text-decoration:none;}   
+	a:active:{color:#FFF; text-decoration:none;}   
+	a:visited {color:#FFF; text-decoration:none;}
+	a:hover {color:#FFF; text-decoration:none;}
+		
+</style>
+</head>
+
+<body>
+<ul class="list">
+<li>
+    <img src="img/鲁迅文学.jpg" width="120" height="200" />
+		<p>《鲁迅文学》<font color="red">价格：100.0元</font></p>
+    	<p class="jj">
+    鲁迅（1881～1936）原名周树人、周樟寿，字豫山、豫亭、豫才。笔名除鲁迅外，还有邓江、唐俟、邓当世、晓角等。中国当代文学家、思想家、革命家和教育家。
+		</p>
+        <p>选择数量：
+        <a href="javascript:f();" style="background:#333; margin-right:4px; padding:2px 7px 2px 7px">-</a>
+        <input id="z" type="text" value="1" style="width:15px"></input>
+        <a href="javascript:j();" style="background:#333;padding:2px 5px 2px 5px">+</a></p>
+    	<a class="gwc" href="javascript:;" onclick="check()" style="background:#F90">加入购物车</a>
+		<a class="gwc" href="javascript:;">立即购买</a>
+</li>
+<li>
+    <img src="img/鲁迅文学.jpg" width="120" height="200" />
+    
+		<p>《鲁迅文学》<font color="red">价格：100.0元</font></p>
+    	<p class="jj">
+    鲁迅（1881～1936）原名周树人、周樟寿，字豫山、豫亭、豫才。笔名除鲁迅外，还有邓江、唐俟、邓当世、晓角等。中国当代文学家、思想家、革命家和教育家。
+		</p>
+        <p>
+    	<a class="gwc" style="background:#F90">加入购物车</a>
+    	<a class="gwc">立即购买</a>
+        </p>
+</li>
+</ul>
+</body>
+</html>

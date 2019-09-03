@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+a.gwc {
+		width: 100px;
+    	height:30px;
+    	line-height: 28px;
+    	background: #ff2832;
+    	border-radius: 3px;
+    	display: inline-block;
+    	color: #fff;
+    	text-align: center;
+    	font-size: 14px;
+    	margin-right: 10px;
+	}
+	.list{
+		list-style-type:none;
+		display:block;
+		width:600px;
+		height:300px;
+	}
+	.list img{
+		float:left;
+	}
+	.list li{
+		width:600px;
+		height:200px;
+		
+	}
+	.jj{
+		height:80px;
+	}
+	a:link {color:#000; text-decoration:none;}
+	a:active:{color:#000; text-decoration:none;}   
+	a:visited {color:#000; text-decoration:none;}
+	a:hover {color:#000; text-decoration:none;}
